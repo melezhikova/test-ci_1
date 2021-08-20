@@ -1,31 +1,41 @@
 {
-  "name": "@melezhikova/ajs",
+  "name": "test-ci_1",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
-  },
+  "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage",
+    "start": "webpack serve –mode development",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/melezhikova/ajs.git"
+    "url": "git+https://github.com/melezhikova/test-ci_1.git"
   },
   "author": "Ludmila",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/melezhikova/ajs/issues"
+    "url": "https://github.com/melezhikova/test-ci_1/issues"
   },
-  "homepage": "https://github.com/melezhikova/ajs#readme",
+  "homepage": "https://github.com/melezhikova/test-ci_1#readme",
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
+    "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.1",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.0.6",
+    "mini-css-extract-plugin": "^2.2.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "core-js": "^3.16.2"
   }
 }
